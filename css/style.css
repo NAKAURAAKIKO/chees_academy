@@ -1,0 +1,434 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+html{
+	font-size: 16px;
+}
+.body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	width: 960px;
+	margin: auto;
+	cursor: url(../img/MIKKI.png)、pointer;
+	font-size: 2rem;
+	background-image: url(../img/cheese.png);
+}
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+/* ヘッダー */
+.header_section{
+ background: url(../img/mainbg.png);
+width: 100%;
+height: 400px;
+ color: rgb(255, 255, 255);
+ display: flex;
+background-repeat: no-repeat;
+background-size: cover;
+justify-content: center;
+align-items: center;
+}
+.main-text{
+	font-size: 44px;
+	padding-bottom: 40px;
+	justify-content: center;
+	text-align: center;
+}
+.next-text{
+	font-size: 28px;
+}
+
+/* ナビゲーションバー */
+nav{
+	display: flex;
+	align-items: center;
+	height: 80px;
+	margin:0 auto;
+	border:1px solid rgb(199, 207, 214);
+}
+nav>:first-of-type{
+	margin: auto;
+}
+a{  
+	display: flex;
+    margin-right:40px;
+    color:#000;
+    text-decoration:none;
+    letter-spacing:.1em;
+}
+a.LOGO{
+	height: 50px;
+}
+div.logo_img{
+	position: absolute;
+	padding: 30px;
+}
+
+
+
+/* ミュージック */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+#Audio-Control {
+  overflow: hidden;
+}
+
+#Audio-Control button {
+  border: 1px solid #ccc;
+  width: 40px;
+  float: left;
+  padding: 5px 0;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+#Audio-Control button.on {
+  border-left: none;
+}
+
+#Audio-Control button.off {
+  border-right: none;
+}
+
+#Audio-Control button.active {
+  background: #ccc;
+}
+
+#Audio-Control button:not(.active):hover {
+  background: rgba(204, 204, 204, 0.3);
+}
+
+
+/* ABOUT */
+
+.about_box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 120px;
+	margin-bottom: 80px;
+}
+.about_title{
+	 color: rgb(255, 217, 0);
+	 margin-bottom: 24px;
+}
+.p1{
+	margin-bottom: 60px;
+}
+
+/* スライドショー */
+#slideshow{
+	width: 100%;
+	overflow: hidden;
+	margin: auto;
+}
+.wrap{
+	display: flex;
+	zoom: 1.5;
+	margin-bottom: 60px;
+}
+.slideshow_box{
+	display: flex;
+	animation: loop-slide 20s infinite linear 1s both;
+}
+@keyframes loop-slide{
+	form{
+		transform: translateX(0);
+	}
+	to{
+		transform: translateX(-100%);
+	}
+}
+/* コース */
+
+.course_img{
+	width: 50%;
+}
+.course_img2{
+	object-fit: cover;
+	width: 50%;
+}
+.course_box1{
+width: 100%;
+margin: 0;
+text-align: center;
+padding: 64px;
+}
+.course_title{
+	margin-bottom: 24px;
+	font-size: 24px;
+}
+.course_box2{
+	display: flex;
+	align-items: center;
+	background-color: aliceblue;
+}
+.course_box3{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-flow: column;
+	padding: 48px;
+	
+}
+.course_box5{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-flow: column;
+	padding: 50px;
+	
+}
+.course_p1{
+	font-size: 24px;
+	margin-bottom: 40px;
+	
+}
+
+.course_box4{
+	display: flex;
+	align-items: center;
+	background-color: aliceblue;
+	justify-content: end;
+}
+
+/* NEWS */
+.news_title{
+	text-align: center;
+	font-size: 24px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.news_section{
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	width: 70%;
+	height: auto;
+	padding-bottom: 60px;
+}
+.news_box{
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.news_text{
+	margin: auto;
+}
+.news_img{
+	display: flex;
+	padding-bottom: 32px;
+}
+.news_p1{
+	padding-bottom: 24px;
+}
+
+.btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.more_btn{
+	width: 300px;
+	height: 60px;
+	font-size: 21px;
+	color: rgb(255, 255, 255);
+	background-color: #ffe61a;
+	text-align: center;
+	display: block;
+	margin-bottom: 48px;
+}
+/*
+-------アクセス-------*/
+.access_box{
+	background-color: #fafafa;
+}
+
+.access_title{
+	text-align: center;
+	font-size: 24px;
+	padding-top: 64px;
+	padding-bottom: 24px;
+}
+.access_p1{
+	text-align: center;
+	padding-bottom: 64px;
+}
+.access_map{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 64px;
+}
+div-map iframe{
+	justify-content: center;
+}
+.map_p{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 80px;
+	margin: auto;
+}
+.map_p p{
+	padding-bottom: 24px;
+}
+/*
+---------CONTACT---------*/
+.contact_title{
+	text-align: center;
+	font-size: 24px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.contact_p{
+	text-align: center;
+	padding-bottom: 64px;
+}
+.contact_p2{
+	text-align: center;
+	padding-bottom: 32px;
+}
+
+
+
+
+/*
+--------お問合せ--------*/
+.form-wrapper{
+	width: 960px;
+	margin: auto;
+}
+.form-title {
+width: 200px;
+margin-right: 120px;
+justify-content: center;
+text-align: center;
+padding-top: 30px;
+}
+.form-title2 {
+width: 200px;
+margin-right: 120px;
+justify-content: center;
+text-align: center;
+padding-top: 10px;
+margin-top: 40px;
+margin-bottom: 32px;
+}
+.form-item {
+  width: 328px;
+  height: 36px;
+  margin: 24px 0px;
+}
+.form-item-Motivation {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 40px;
+}
+.checkbox {
+  width: 24px;
+  height: 24px;
+  background-color: #f0ebe5;
+  margin: 12px 0;
+  margin-right: 40px;
+}
+.form-inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+dd {
+  border: 2px solid #bfbfbf;
+  width: 328px;
+  height: 26px;
+}
+.textarea-large {
+  	width: 328px;
+  	height: 108px;
+	padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #bfbfbf;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+	margin-top: 32px;
+	margin-bottom: 40px;
+}
+.contact-submit {
+  width: 290px;
+  height: 54px;
+  background-color: #ffe61a;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  margin-bottom: 180px;
+
+}
+
+
+/* ページTOPに戻る */
+.pagetop{
+    display: none;
+    position: fixed;
+    right: 5px;
+    bottom: 70px;
+}
+.pagetop a{
+    display: block;
+    font-size: 0;
+    width: 100px;
+    height: 100px;
+	background-image: url(../img/MIKKI.png);
+    border-radius: 10%;
+    line-height: 50px;
+}
+.pagetop a i{
+    font-size: 60px;
+    color:rgb(255, 0, 0);
+    line-height: 50px;
+}
+
+
+
+
+/*
+---------------------*/
+
+.footer_box{
+	background-color: #bfbfbf;
+	font-size: 18px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	padding: 32px;
+}
